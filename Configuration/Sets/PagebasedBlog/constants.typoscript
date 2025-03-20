@@ -1,0 +1,6 @@
+plugin.tx_pagebasedblog.settings.structuredData.publisher {
+  # cat=plugin.tx_pagebasedblog/advanced; type=string; label=Define publisher name for post structured data
+  name =
+  # cat=plugin.tx_pagebasedblog/advanced; type=string; label=Define publisher logo for post structured data
+  logo =
+}

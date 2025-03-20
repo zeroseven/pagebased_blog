@@ -1,0 +1,18 @@
+categories:
+  plugin.tx_pagebasedblog.settings.structuredData.publisher:
+    label: 'Pagebased Blog'
+
+settings:
+  plugin.tx_pagebasedblog.settings.structuredData.publisher.name:
+    label: 'Define publisher name for post structured data'
+    category: plugin.tx_pagebasedblog.settings.structuredData.publisher
+    description: ''
+    type: string
+    default: ''
+
+  plugin.tx_pagebasedblog.settings.structuredData.publisher.logo:
+    label: 'Define publisher logo for post structured data'
+    category: plugin.tx_pagebasedblog.settings.structuredData.publisher
+    description: ''
+    type: string
+    default: ''

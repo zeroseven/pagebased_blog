@@ -1,0 +1,4 @@
+plugin.tx_pagebasedblog.settings.structuredData.publisher {
+  name = {$plugin.tx_pagebasedblog.settings.structuredData.publisher.name}
+  logo = {$plugin.tx_pagebasedblog.settings.structuredData.publisher.logo}
+}
