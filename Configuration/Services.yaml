@@ -1,14 +1,18 @@
 services:
-    _defaults:
-        autowire: true
-        autoconfigure: true
-        public: false
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
 
-    Zeroseven\PagebasedBlog\:
-        resource: '../Classes/*'
+  Zeroseven\PagebasedBlog\:
+    resource: '../Classes/*'
 
-    Zeroseven\PagebasedBlog\EventListener\ExtendStructuredDataEvent:
-        tags:
-            -   name: event.listener
-                identifier: 'pagebased_blog/extend-structured-data'
-                event: Zeroseven\Pagebased\Event\StructuredDataEvent
+  Zeroseven\PagebasedBlog\EventListener\ExtendStructuredDataEvent:
+    arguments:
+      $contentObjectRenderer: '@TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer'
+      $siteFinder: '@TYPO3\CMS\Core\Site\SiteFinder'
+      $extensionConfiguration: '@TYPO3\CMS\Core\Configuration\ExtensionConfiguration'
+    tags:
+      - name: event.listener
+        identifier: 'pagebased-blog-structured-data'
+        event: Zeroseven\Pagebased\Event\StructuredDataEvent
